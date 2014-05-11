@@ -2,7 +2,7 @@
 ### Coursera, Spring 2014
 ### Peer assessment 1; Plot 2
 
-file.path <- "C:\\Users\\SJS\\Documents\\Coursera\\EDA\\Project1\\ExData_Plotting1"
+file.path <- "C:\\Users\\SJS\\Documents\\Coursera\\EDA\\Project1"
 setwd(file.path)
 
 # read data
@@ -19,8 +19,11 @@ ndtposix <- as.POSIXct(strptime(ndt, format="%Y-%m-%d,%H:%M:%S"))
 hpc$Date.Time <- ndtposix
 
 # plot 2
+file.path <- "C:\\Users\\SJS\\Documents\\Coursera\\EDA\\Project1\\ExData_Plotting1"
+setwd(file.path)
+
 png("plot2.png", width = 480, height = 480, pointsize=12)
 
-with(hpc, plot(Date.Time, Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)"))
+with(hpc, plot(Date.Time, Global_active_power, type="l", font.axis=2, font.lab=2, xlab="", ylab="Global Active Power (kilowatts)"))
 
 dev.off()
